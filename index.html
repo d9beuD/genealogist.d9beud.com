@@ -17,7 +17,7 @@
                     in a whole new way.
                 </p>
         
-                <a href="#" class="btn btn-lg btn-brown rounded-pill">
+                <a href="{{ site.app_url }}/register" class="btn btn-lg btn-brown rounded-pill">
                     Start Your Journey
                     <i class="fa-solid fa-chevron-right"></i>
                 </a>
@@ -40,7 +40,8 @@
                             </p>
                         </div>
                         <div class="card-img-bottom px-4">
-                            <img src="{{  "/assets/img/capture-responsive.png" | relative_url }}" alt="" class="mx-auto d-block">
+                            {% capture img_src %}{{  "/assets/img/capture-responsive.webp" }}{% endcapture %}
+                            <img src="{{ img_src }}" srcset="{{ img_src | srcset }}" alt="" class="mx-auto d-block">
                         </div>
                     </div>
                 </div>
@@ -53,7 +54,9 @@
                             <p class="text-brown">
                                 Explore your family history with an unprecedented immersion.
                             </p>
-                            <img src="{{  "/assets/img/capture-tree.png" | relative_url }}" alt="" class="img-fluid my-auto">
+                            {% capture img_src %}{{  "/assets/img/capture-tree.webp" }}{% endcapture %}
+
+                            <img src="{{  img_src }}" srcset="{{ img_src | srcset }}" alt="" class="mw-100 my-auto" style="width: auto;">
                         </div>
                     </div>
                 </div>
