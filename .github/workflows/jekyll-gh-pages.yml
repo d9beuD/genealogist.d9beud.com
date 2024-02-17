@@ -33,7 +33,9 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
       - name: Build assets with Gulp
-        run: npm run build
+        run: >-
+          npm i -g gulp
+          npm run build
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
