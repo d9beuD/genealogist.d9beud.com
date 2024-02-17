@@ -1,0 +1,31 @@
+$enable-shadows: true;
+
+$brown-100: #FFEFD6;
+$brown-200: #FFDAB9;
+$brown-300: #D5C4A9;
+$brown-400: #A3927B;
+$brown-500: #80653B;
+$brown-600: #5D4C2D;
+$brown-700: #3E2C1B;
+$brown-800: #2B1D14;
+$brown-900: #1D0F0A;
+
+// Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "bootstrap/variables";
+@import "bootstrap/variables-dark";
+
+// Include any default map overrides here
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    "brown": $brown-500,
+  )
+);
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark", "success", "warning", "danger");
+
+// $body-bg: $brown-100;
+$body-bg-rgb-custom: to-rgb($body-bg);
+
+$body-secondary-bg: $brown-200;
+$body-secondary-bg-rgb-custom: to-rgb($body-secondary-bg);

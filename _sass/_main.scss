@@ -1,0 +1,42 @@
+@import "bootstrap/functions";
+@import "variables";
+@import "bootstrap/maps";
+@import "bootstrap/mixins";
+
+@import "navbar";
+@import "background";
+@import "cards";
+
+.text-hero {
+    --hero-color-1-rgb: #{to-rgb($brown-300)};
+    --hero-color-2-rgb: #{to-rgb($brown-700)};
+    --hero-color-3-rgb: #{to-rgb($brown-300)};
+
+    background: rgb(255,218,185);
+    background: linear-gradient(
+        139deg, 
+        rgba(var(--hero-color-1-rgb),1) 0%, 
+        rgba(var(--hero-color-2-rgb),1) 35%, 
+        rgba(var(--hero-color-3-rgb),1) 100%
+    );
+    background-clip: text;
+    color: transparent;
+}
+    
+main > section {
+    --section-padding: 4rem;
+    --section-padding-sm: 2rem;
+    padding: var(--section-padding-sm) 0 var(--section-padding-sm) 0;
+
+    &:first-child,
+    &:last-child {
+        padding-top: var(--section-padding);
+    }
+}
+
+@include media-breakpoint-up(md) {
+    main > section {
+        --section-padding: 8rem;
+        --section-padding-sm: 4rem;
+    }
+}
