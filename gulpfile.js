@@ -2,9 +2,10 @@ const gulp = require('gulp');
 
 const paths = {
     sass: './_assets/scss',
-    sassFiles: './_assets/scss/*.scss',
-    css: './assets/css',
-    cssFiles: './_assets/css/*.css',
+    sassFiles: './_assets/scss/**/*.scss',
+    preCss: './_assets/css',
+    preCssFiles: './assets/css/**/*.css',
+    postCss: './assets/css/',
     jekyll: '.',
 }
 
@@ -13,7 +14,7 @@ gulp.task('build:sass', () => {
 
     return gulp.src(paths.sassFiles)
         .pipe(sass())
-        .pipe(gulp.dest(paths.css));
+        .pipe(gulp.dest(paths.preCss));
 })
 
 gulp.task('autoprefixer', () => {
@@ -21,9 +22,15 @@ gulp.task('autoprefixer', () => {
     const sourcemaps = require('gulp-sourcemaps');
     const postcss = require('gulp-postcss');
 
-    return gulp.src(paths.cssFiles)
+    return gulp.src(paths.preCssFiles)
         .pipe(sourcemaps.init())
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(paths.css));
+        .pipe(gulp.dest(paths.postCss));
 })
+
+gulp.task('default', gulp.series('build:sass', 'autoprefixer'));
+
+gulp.task('watch', gulp.series('default', () => {
+    gulp.watch(paths.sassFiles, gulp.series('default'));
+}))
