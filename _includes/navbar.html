@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg bg-body-blurred sticky-top border-bottom" id="main-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="{{ site.base  }}">
+            <i class="fa-duotone fa-lg fa-tree text-brown"></i>
+            Genealogist
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-navbar-menu"
+            aria-controls="main-navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="main-navbar-menu">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+                <li class="nav-item me-2">
+                    <a href="#" class="nav-link">Log in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-sm btn-brown rounded-pill">
+                        Sign up
+                        {% comment %} <i class="fa-solid fa-chevron-right"></i> {% endcomment %}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
