@@ -1,0 +1,38 @@
+.card-border-container {
+    --hero-color-1-rgb: #{to-rgb($brown-300)};
+    --hero-color-2-rgb: #{to-rgb($brown-700)};
+    --hero-color-3-rgb: #{to-rgb($brown-300)};
+    --hero-border-radius: #{$border-radius * 4};
+
+    background: linear-gradient(
+        139deg, 
+        rgba(var(--hero-color-1-rgb),1) 0%, 
+        rgba(var(--hero-color-2-rgb),1) 35%, 
+        rgba(var(--hero-color-3-rgb),1) 100%
+    );
+    border-radius: var(--hero-border-radius);
+    padding: $border-width;
+    overflow: hidden;
+    height: 100%;
+    
+    > .card {
+        --bs-card-border-width: 0;
+        --bs-card-border-radius: var(--hero-border-radius);
+        --bs-card-spacer-y: #{($spacer * 2)};
+        --bs-card-spacer-x: #{($spacer * 2)};
+        
+        background-image: radial-gradient(rgba(163,146,123,0.3) 0%, rgba(62,44,27,0) 100%);
+        background-repeat: no-repeat;
+        height: 100%;
+        
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-img-bottom > img {
+            max-height: 20rem;
+            max-width: 100%;
+        }
+    }
+}

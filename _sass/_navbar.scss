@@ -1,0 +1,8 @@
+#main-navbar {
+    --bs-navbar-bg: #E7E3DE;
+    --bs-navbar-bg-rgb: #{to-rgb($brown-100)};
+    --bs-border-color: #{$brown-300};
+    --bs-shadow-color-rgb: #{to-rgb($brown-400)};
+    background-color: rgba(var(--bs-navbar-bg-rgb), 0.2);
+    box-shadow: 0 0.5rem 10rem rgba(var(--bs-shadow-color-rgb), 1);
+}

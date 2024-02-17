@@ -1,0 +1,15 @@
+body {
+    background: 
+        var(--bs-body-bg);
+}
+
+.bg-body-blurred {
+    // --bg-color: #{to-rgb($brown-300)};
+    // --bg-color: #{to-rgb($body-bg)};
+    backdrop-filter: blur(2rem);
+}
+
+.shadow-brown {
+    --shadow-color: #{to-rgb($brown-400)};
+    box-shadow: 0 0.5rem 10rem 1.5rem rgba(var(--shadow-color), 1);
+}
