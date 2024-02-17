@@ -22,7 +22,7 @@ $theme-colors: map-merge(
   )
 );
 
-$theme-colors: map-remove($theme-colors, "info", "light", "dark", "success", "warning", "danger");
+$theme-colors: map-remove($theme-colors, "info", "light", "dark", "success", "warning", "danger", "secondary");
 
 // $body-bg: $brown-100;
 $body-bg-rgb-custom: to-rgb($body-bg);
