@@ -6,3 +6,4 @@ _site
 .DS_Store
 /assets/css
 /_assets/css
+/_responsive
