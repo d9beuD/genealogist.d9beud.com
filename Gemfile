@@ -8,6 +8,7 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag", "~> 2.6"
   gem "jekyll-sitemap", "~> 1.4"
   gem 'jekyll-responsive-magick'
+  gem 'octopress-autoprefixer'
   # gem 'jekyll-paginate-v2'
 end
 
