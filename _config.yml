@@ -17,3 +17,13 @@ plugins:
 sass:
   style: compressed
   sourcemap: development
+
+exclude:
+  - _assets/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json

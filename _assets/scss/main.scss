@@ -1,7 +1,7 @@
-@import "bootstrap/functions";
+@import "node_modules/bootstrap/scss//functions";
 @import "variables";
-@import "bootstrap/maps";
-@import "bootstrap/mixins";
+@import "node_modules/bootstrap/scss//maps";
+@import "node_modules/bootstrap/scss//mixins";
 
 @import "navbar";
 @import "background";
