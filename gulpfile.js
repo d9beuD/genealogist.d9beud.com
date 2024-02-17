@@ -4,8 +4,8 @@ const paths = {
     sass: './_assets/scss',
     sassFiles: './_assets/scss/**/*.scss',
     preCss: './_assets/css',
-    preCssFiles: './assets/css/**/*.css',
-    postCss: './assets/css/',
+    preCssFiles: './_assets/css/**/*.css',
+    postCss: './assets/css',
     jekyll: '.',
 }
 
