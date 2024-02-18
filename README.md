@@ -2,7 +2,7 @@
 
 # Genealogist landing page
 
-This repository stores and host the Genealogist landing page. This project is built using 
+This repository stores and host the [Genealogist](https://github.com/d9beud/genealogist) landing page. This project is built using 
 [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/).
 
 ## Development
