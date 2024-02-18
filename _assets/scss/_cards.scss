@@ -73,6 +73,14 @@
         }
     }
 
+    .icon-animate {
+        --transition-timing-fn: cubic-bezier(0.585, 0.095, 0.000, 0.860);
+        transition: all .5s var(--transition-timing-fn);
+        position: absolute;
+        top: 55%;
+        left: 60%;
+    }
+
     &:hover {
         .img-animate-translate {
             transform: translateY(0) scale(1);
@@ -80,6 +88,11 @@
 
         .img-animate-scale {
             transform: scale(1);
+        }
+
+        .icon-animate {
+            top: 45%;
+            left: 50%;
         }
     }
 }
