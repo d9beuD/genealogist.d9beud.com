@@ -26,10 +26,20 @@ gulp.task('autoprefixer', () => {
         .pipe(sourcemaps.init())
         .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest(paths.postCss));
+        .pipe(gulp.dest(paths.preCss));
 })
 
-gulp.task('default', gulp.series('build:sass', 'autoprefixer'));
+gulp.task('minify-css', () => {
+    const cleanCSS = require('gulp-clean-css');
+
+    return gulp.src(paths.preCssFiles)
+        .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(gulp.dest(paths.postCss));
+});
+
+gulp.task('build:css', gulp.series('build:sass', 'autoprefixer', 'minify-css'));
+
+gulp.task('default', gulp.series('build:css'));
 
 gulp.task('watch', gulp.series('default', () => {
     gulp.watch(paths.sassFiles, gulp.series('default'));
