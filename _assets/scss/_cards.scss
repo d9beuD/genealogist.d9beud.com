@@ -58,4 +58,28 @@
         transition: opacity .3s ease-in-out;
         z-index: 1;
     }
+
+    // Animations
+    .img-animate {
+        --transition-timing-fn: cubic-bezier(0.585, 0.095, 0.000, 0.860);
+        transition: all .5s var(--transition-timing-fn);
+
+        &.img-animate-translate {
+            transform: translateY(2rem) scale(.95);
+        }
+
+        &.img-animate-scale {
+            transform: translateY(.5rem) scale(.98);
+        }
+    }
+
+    &:hover {
+        .img-animate-translate {
+            transform: translateY(0) scale(1);
+        }
+
+        .img-animate-scale {
+            transform: scale(1);
+        }
+    }
 }

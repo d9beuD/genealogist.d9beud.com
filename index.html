@@ -45,7 +45,7 @@
                                 src="{{ img_src }}" 
                                 srcset="{{ img_src | srcset }}" 
                                 alt="" 
-                                class="mx-auto d-block"
+                                class="mx-auto d-block img-animate img-animate-translate"
                                 style="aspect-ratio: auto 1;"
                             >
                         </div>
@@ -65,7 +65,7 @@
                                 src="{{ img_src }}" 
                                 srcset="{{ img_src | srcset }}" 
                                 alt="" 
-                                class="mw-100 my-auto" 
+                                class="mw-100 my-auto img-animate img-animate-scale" 
                                 style="width: auto; aspect-ratio: auto 1340 / 513;"
                             >
                         </div>
@@ -75,19 +75,22 @@
             <div class="col-md-7">
                 <div class="card-border-container">
                     <div class="card">
-                        <div class="row g-0 h-100">
+                        <div class="card-body">
+                            <h2 class="fw-bold text-hero">Trace your heritage with precision</h2>
+                            <p class="text-brown">
+                                Document and safeguard your family history with 
+                                meticulous detail through our source backup feature.
+                            </p>
+                        </div>
+                        <div class="card-img-bottom px-4">
                             {% capture img_src %}{{ "/assets/img/capture-profile.webp" }}{% endcapture %}
-                            <div class="col-4 border-end" style="background-image: url({{ img_src }}); background-size: cover;">
-                            </div>
-                            <div class="col">
-                                <div class="card-body">
-                                    <h2 class="fw-bold text-hero">Trace your heritage with precision</h2>
-                                    <p class="text-brown">
-                                        Document and safeguard your family history with 
-                                        meticulous detail through our source backup feature.
-                                    </p>
-                                </div>
-                            </div>
+                            <img
+                                src="{{ img_src }}"
+                                srcset="{{ img_src | srcset }}"
+                                alt=""
+                                class="mx-auto d-block rounded-4 rounded-bottom-0 border border-bottom-0 shadow img-animate img-animate-scale"
+                                style="aspect-ratio: auto 1000 / 574;"
+                            >
                         </div>
                     </div>
                 </div>
