@@ -24,6 +24,7 @@
         background-image: radial-gradient(rgba(163,146,123,0.3) 0%, rgba(62,44,27,0) 100%);
         background-repeat: no-repeat;
         height: 100%;
+        overflow: hidden;
         
         .card-body {
             display: flex;
