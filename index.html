@@ -41,7 +41,13 @@
                         </div>
                         <div class="card-img-bottom px-4">
                             {% capture img_src %}{{  "/assets/img/capture-responsive.webp" }}{% endcapture %}
-                            <img src="{{ img_src }}" srcset="{{ img_src | srcset }}" alt="" class="mx-auto d-block">
+                            <img 
+                                src="{{ img_src }}" 
+                                srcset="{{ img_src | srcset }}" 
+                                alt="" 
+                                class="mx-auto d-block"
+                                style="aspect-ratio: auto 1;"
+                            >
                         </div>
                     </div>
                 </div>
@@ -55,8 +61,13 @@
                                 Explore your family history with an unprecedented immersion.
                             </p>
                             {% capture img_src %}{{  "/assets/img/capture-tree.webp" }}{% endcapture %}
-
-                            <img src="{{  img_src }}" srcset="{{ img_src | srcset }}" alt="" class="mw-100 my-auto" style="width: auto;">
+                            <img 
+                                src="{{  img_src }}" 
+                                srcset="{{ img_src | srcset }}" 
+                                alt="" 
+                                class="mw-100 my-auto" 
+                                style="width: auto; aspect-ratio: auto 1340 / 513;"
+                            >
                         </div>
                     </div>
                 </div>
