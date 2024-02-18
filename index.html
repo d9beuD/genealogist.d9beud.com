@@ -62,7 +62,7 @@
                             </p>
                             {% capture img_src %}{{  "/assets/img/capture-tree.webp" }}{% endcapture %}
                             <img 
-                                src="{{  img_src }}" 
+                                src="{{ img_src }}" 
                                 srcset="{{ img_src | srcset }}" 
                                 alt="" 
                                 class="mw-100 my-auto" 
@@ -75,12 +75,19 @@
             <div class="col-md-7">
                 <div class="card-border-container">
                     <div class="card">
-                        <div class="card-body">
-                            <h2 class="fw-bold text-hero">Trace your heritage with precision</h2>
-                            <p class="text-brown">
-                                Document and safeguard your family history with 
-                                meticulous detail through our source backup feature.
-                            </p>
+                        <div class="row g-0 h-100">
+                            {% capture img_src %}{{ "/assets/img/capture-profile.webp" }}{% endcapture %}
+                            <div class="col-4 border-end" style="background-image: url({{ img_src }}); background-size: cover;">
+                            </div>
+                            <div class="col">
+                                <div class="card-body">
+                                    <h2 class="fw-bold text-hero">Trace your heritage with precision</h2>
+                                    <p class="text-brown">
+                                        Document and safeguard your family history with 
+                                        meticulous detail through our source backup feature.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
