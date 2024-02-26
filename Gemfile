@@ -7,8 +7,7 @@ group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem "jekyll-seo-tag", "~> 2.6"
   gem "jekyll-sitemap", "~> 1.4"
-  gem 'jekyll-responsive-magick'
-  gem 'octopress-autoprefixer'
+  gem "jekyll-responsive-magick", "~> 1.2"
 end
 
 # Lock `http_parser.rb` gem to `v0.6.x` on JRuby builds since newer versions of the gem
